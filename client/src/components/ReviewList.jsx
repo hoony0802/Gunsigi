@@ -74,7 +74,7 @@ function ReviewList({ name, productId }) {
   }, [sequence, month]);
 
   //! state 변경
-  const reviewFilterHandler = (e, num) => {
+  const handleReviewFilter = (e, num) => {
     const monthIdx = month.indexOf(true);
 
     if (monthIdx === num) {
@@ -134,7 +134,7 @@ function ReviewList({ name, productId }) {
             <div className="sequence">
               <span
                 aria-hidden="true"
-                onClick={(e) => reviewFilterHandler(e)}
+                onClick={(e) => handleReviewFilter(e)}
                 className={
                   sequence === 'recent' ? 'color_change button' : 'color button'
                 }
@@ -144,7 +144,7 @@ function ReviewList({ name, productId }) {
               <span className="color_change">|</span>
               <span
                 aria-hidden="true"
-                onClick={(e) => reviewFilterHandler(e)}
+                onClick={(e) => handleReviewFilter(e)}
                 className={
                   sequence === 'like' ? 'color_change button' : 'color button'
                 }
@@ -157,7 +157,7 @@ function ReviewList({ name, productId }) {
             <span
               aria-hidden="true"
               onClick={(e) => {
-                reviewFilterHandler(e, 0);
+                handleReviewFilter(e, 0);
               }}
               className={month[0] ? 'ReviewList_month_change' : ''}
             >
@@ -166,7 +166,7 @@ function ReviewList({ name, productId }) {
             <span
               aria-hidden="true"
               onClick={(e) => {
-                reviewFilterHandler(e, 1);
+                handleReviewFilter(e, 1);
               }}
               className={month[1] ? 'ReviewList_month_change' : ''}
             >
@@ -175,7 +175,7 @@ function ReviewList({ name, productId }) {
             <span
               aria-hidden="true"
               onClick={(e) => {
-                reviewFilterHandler(e, 2);
+                handleReviewFilter(e, 2);
               }}
               className={month[2] ? 'ReviewList_month_change' : ''}
             >
@@ -184,7 +184,7 @@ function ReviewList({ name, productId }) {
             <span
               aria-hidden="true"
               onClick={(e) => {
-                reviewFilterHandler(e, 3);
+                handleReviewFilter(e, 3);
               }}
               className={month[3] ? 'ReviewList_month_change' : ''}
             >
