@@ -135,7 +135,14 @@
           font-weight: 600;
         }
       }
-      gap: 10px;
+
+      .back_btn_area {
+        width: 250px;
+        position: relative;
+        top: -10px;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
 
     input {
@@ -190,6 +197,10 @@
       .btns_container {
         .withdrawal_btn {
           margin-top: 0;
+        }
+
+        .back_btn_area {
+          display: none;
         }
       }
     }

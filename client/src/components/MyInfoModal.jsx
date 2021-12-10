@@ -7,6 +7,7 @@ import WithdrawalModal from './WithdrawalModal';
 import { nicknameValidator, passwordValidator } from '../utils/validation';
 import { stopScrollMypage, clearStopScroll } from '../utils/ModalScrollPrevent';
 import '../styles/Mypage/MyInfoModal.scss';
+import BackButton from './BackButton';
 
 function MyInfoModal({ handleMyInfoModalClick, userType }) {
   const dispatch = useDispatch();
@@ -238,9 +239,16 @@ function MyInfoModal({ handleMyInfoModalClick, userType }) {
             >
               회원 탈퇴
             </button>
+            <div className="back_btn_area">
+              <BackButton onClick={handleMyInfoModalClick} />
+            </div>
           </div>
         </form>
-        <div className="modify_img_container">
+        <div
+          className="modify_img_container"
+          onClick={(e) => e.stopPropagation()}
+          aria-hidden="true"
+        >
           <img src="logo_gunsigi.png" alt="logo" />
         </div>
       </div>

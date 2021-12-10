@@ -35,9 +35,9 @@
 
         :first-child {
           font-weight: 800;
+          width: 70px;
         }
         span {
-          width: 70px;
           text-overflow: ellipsis;
         }
       }
@@ -247,9 +247,10 @@
 
     .bottom {
       display: flex;
+      flex-direction: column;
       justify-content: center;
 
-      button[type='button'] {
+      .submit_btn {
         background-color: $light-blue;
         border-radius: 30px;
         height: 40px;
@@ -262,6 +263,14 @@
           color: $white;
         }
       }
+
+      .back_btn_area {
+        width: 100%;
+        position: relative;
+        top: 20px;
+        display: flex;
+        justify-content: flex-end;
+      }
     }
   }
 }
@@ -272,6 +281,12 @@
       width: 400px;
       height: 700px;
       border-radius: 5px;
+
+      .bottom {
+        .back_btn_area {
+          display: none;
+        }
+      }
     }
   }
 }

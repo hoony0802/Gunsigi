@@ -15,8 +15,9 @@ import {
 import Google from '../Google';
 import Kakao from '../Kakao';
 import '../../styles/LoginSignup/Signup.scss';
+import BackButton from '../BackButton';
 
-function Signup() {
+function Signup({ handleCloseSignupModal }) {
   const dispatch = useDispatch();
 
   // * input DOM 접근
@@ -361,9 +362,12 @@ function Signup() {
           <Google responseGoogle={responseGoogle} />
           <Kakao responseKakao={responseKakao} />
         </div>
-        <button type="button" onClick={handleSignup}>
+        <button type="button" onClick={handleSignup} className="signup_btn">
           회원가입
         </button>
+        <div className="back_btn_area">
+          <BackButton onClick={handleCloseSignupModal} />
+        </div>
       </div>
     </div>
   );

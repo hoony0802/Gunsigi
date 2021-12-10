@@ -10,6 +10,7 @@ import {
 import Google from '../Google';
 import Kakao from '../Kakao';
 import '../../styles/LoginSignup/Login.scss';
+import BackButton from '../BackButton';
 
 function Login({ handleCloseLogin }) {
   const dispatch = useDispatch();
@@ -161,13 +162,7 @@ function Login({ handleCloseLogin }) {
           </div>
 
           <div className="back_btn_area">
-            <button
-              className="back_btn"
-              type="button"
-              onClick={handleCloseLogin}
-            >
-              <img src="/icons/icon_arrow_left.svg" alt="back" />
-            </button>
+            <BackButton onClick={handleCloseLogin} />
           </div>
         </div>
       </div>

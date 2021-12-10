@@ -169,12 +169,6 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      .back_btn {
-        width: 40px;
-        img {
-          filter: $f-deep-grey;
-        }
-      }
     }
   }
 }
@@ -182,9 +176,13 @@
 @include tablet {
   .Login_container {
     padding: 60px 50px;
-  }
-  .back_btn {
-    display: none;
+    .Login_in {
+      .button-password {
+        .back_btn_area {
+          display: none;
+        }
+      }
+    }
   }
 }
 
