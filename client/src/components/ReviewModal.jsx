@@ -48,7 +48,7 @@ function ReviewModal({ setisOpenWrite, productImg, productName, productId }) {
     setImgBase64(
       [
         ...imgBase64,
-        ...newImages.filter((image) => !(image in imgBase64)),
+        ...newImages.filter((image) => !imgBase64.includes(image)),
       ].slice(-4),
     );
 
@@ -305,7 +305,11 @@ function ReviewModal({ setisOpenWrite, productImg, productName, productId }) {
           </div>
         </div>
         <div className="bottom">
-          <button onClick={() => reviewRequest()} type="button" className="submit_btn">
+          <button
+            onClick={() => reviewRequest()}
+            type="button"
+            className="submit_btn"
+          >
             작성 완료
           </button>
           <div className="back_btn_area">

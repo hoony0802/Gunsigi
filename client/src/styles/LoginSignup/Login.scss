@@ -184,6 +184,9 @@
       }
     }
   }
+  .back_btn {
+    display: none;
+  }
 }
 
 @include laptop {
