@@ -7,7 +7,7 @@ import WithdrawalModal from './WithdrawalModal';
 import { nicknameValidator, passwordValidator } from '../utils/validation';
 import { stopScrollMypage, clearStopScroll } from '../utils/ModalScrollPrevent';
 import '../styles/Mypage/MyInfoModal.scss';
-import BackButton from './BackButton';
+import CloseButton from './CloseButton';
 
 function MyInfoModal({ handleMyInfoModalClick, userType }) {
   const dispatch = useDispatch();
@@ -145,6 +145,7 @@ function MyInfoModal({ handleMyInfoModalClick, userType }) {
           onClick={(e) => e.stopPropagation()}
           aria-hidden="true"
         >
+          <CloseButton onClick={handleMyInfoModalClick} />
           <span className="title">회원정보 수정</span>
           <div className="img_info">
             <div onClick={handleDeleteProfileImage} aria-hidden="true">
@@ -239,9 +240,6 @@ function MyInfoModal({ handleMyInfoModalClick, userType }) {
             >
               회원 탈퇴
             </button>
-            <div className="back_btn_area">
-              <BackButton onClick={handleMyInfoModalClick} />
-            </div>
           </div>
         </form>
         <div

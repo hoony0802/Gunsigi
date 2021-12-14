@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import '../styles/ReviewModal.scss';
 import { stopScroll, clearStopScroll } from '../utils/ModalScrollPrevent';
 import imageCompression from 'browser-image-compression';
-import BackButton from './BackButton';
+import CloseButton from './CloseButton';
 
 function ReviewModal({ setisOpenWrite, productImg, productName, productId }) {
   const [imgBase64, setImgBase64] = useState([]);
@@ -140,6 +140,7 @@ function ReviewModal({ setisOpenWrite, productImg, productName, productId }) {
         onClick={(e) => e.stopPropagation()}
         aria-hidden="true"
       >
+        <CloseButton onClick={handleCloseReviewModal} />
         <div className="review_top">
           <div className="review_title">
             <span>제품명</span>
@@ -312,9 +313,6 @@ function ReviewModal({ setisOpenWrite, productImg, productName, productId }) {
           >
             작성 완료
           </button>
-          <div className="back_btn_area">
-            <BackButton onClick={handleCloseReviewModal} />
-          </div>
         </div>
       </form>
     </div>

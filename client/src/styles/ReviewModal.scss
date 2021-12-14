@@ -263,14 +263,6 @@
           color: $white;
         }
       }
-
-      .back_btn_area {
-        width: 100%;
-        position: relative;
-        top: 20px;
-        display: flex;
-        justify-content: flex-end;
-      }
     }
   }
 }
@@ -281,12 +273,6 @@
       width: 400px;
       height: 700px;
       border-radius: 5px;
-
-      .bottom {
-        .back_btn_area {
-          display: none;
-        }
-      }
     }
   }
 }

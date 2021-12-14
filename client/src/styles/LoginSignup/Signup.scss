@@ -118,24 +118,11 @@
       transform: scale(0.98);
     }
   }
-
-  .back_btn_area {
-    position: relative;
-    top: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
 }
 
 @include tablet {
   .Signup_container {
     padding: 60px 50px;
-    .Signup_in {
-      .back_btn_area {
-        display: none;
-      }
-    }
   }
 }
 

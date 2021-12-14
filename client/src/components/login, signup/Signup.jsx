@@ -15,7 +15,7 @@ import {
 import Google from '../Google';
 import Kakao from '../Kakao';
 import '../../styles/LoginSignup/Signup.scss';
-import BackButton from '../BackButton';
+import CloseButton from '../CloseButton';
 
 function Signup({ handleCloseSignupModal }) {
   const dispatch = useDispatch();
@@ -269,6 +269,7 @@ function Signup({ handleCloseSignupModal }) {
   return (
     <div className="Signup_container">
       <div className="Signup_in">
+        <CloseButton onClick={handleCloseSignupModal} />
         <div className="title">회원가입</div>
         <div className="input">
           <div className="email">
@@ -365,9 +366,6 @@ function Signup({ handleCloseSignupModal }) {
         <button type="button" onClick={handleSignup} className="signup_btn">
           회원가입
         </button>
-        <div className="back_btn_area">
-          <BackButton onClick={handleCloseSignupModal} />
-        </div>
       </div>
     </div>
   );

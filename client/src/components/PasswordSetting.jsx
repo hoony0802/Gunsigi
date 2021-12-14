@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { setforgotPassword, successSendEmail } from '../actions/modalAction';
 import { stopScroll, clearStopScroll } from '../utils/ModalScrollPrevent';
-import BackButton from './BackButton';
+import CloseButton from './CloseButton';
 
 function PasswordSetting() {
   const dispatch = useDispatch();
@@ -53,6 +53,7 @@ function PasswordSetting() {
         aria-hidden="true"
         onClick={(e) => e.stopPropagation()}
       >
+        <CloseButton onClick={handleCloseModalClick} />
         <div className="PasswordSetting">
           <img src="/images/lock.png" alt="lock" />
           <div className="forgot">
@@ -81,9 +82,6 @@ function PasswordSetting() {
           >
             링크 보내기
           </button>
-        </div>
-        <div className="back_btn_area">
-          <BackButton onClick={handleCloseModalClick} />
         </div>
       </div>
     </div>
